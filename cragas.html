@@ -1,0 +1,164 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<link rel="icon" type="imagen/png" href="favicon.png" />
+		<link rel="shorcut icon" type="image/png" href="favicon.png">
+		<meta charset="utf-8"/>
+		<title>Samay Ragas Occidental</title>
+		<script src="jquery-2.2.4.js"></script>
+		<link rel="stylesheet" href="mobile/jquery.mobile-1.4.5.css">
+		<script type="text/javascript" src="mobile/jquery.mobile-1.4.5.min.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css"> 
+	</head>
+	<body>
+	 <div data-role="page" id="Inicio">
+		<div data-role="header">
+			<h1>Samay Raga Time</h1>
+		</div>
+
+<div data-role="cragas" id="cragas">
+		<div data-role="header">
+			<a href="#" data-icon="back" data-rel="back">Atras</a>
+		<h1>Trasponer a Escala Temperada</h1>
+		</div>
+			
+		<div data-role="content"> 
+			<div data-role="fieldcontainer">
+				<h3 ><span >Introduce en lenguaje Hindu para trasponer<span></h3>
+				<label for="Aroha" >Aroha: </label>
+				<input type="text" id="Aroha" name="Aroha" maxlength="200">
+				<span style="display:block"  id="earoha"></span>
+				<span id="iaroha"><span>
+			</div>
+			<div data-role="fieldcontainer">
+				<label for="Avaroha" >Avaroha: </label>
+				<input type="text" id="Avaroha" name="Avaroha" maxlength="200">
+				<span  style="display:block" id="eavaroha" ></span>			
+				<span id="iavaroha"><span>
+			</div>
+		</div>
+	</div>
+	</body>
+	<script languaje="javascript">
+	$(document).ready(function(){   
+			
+			$('#Avaroha').on('input',function(e){
+			var entra1=$('#Avaroha');
+			var sale2=$('#eavaroha');
+			traduce(entra1,sale2,'2');
+			});
+			$('#Aroha').on('input',function(e){
+			var entra1=$('#Aroha');
+			var sale2=$('#earoha');
+			traduce(entra1,sale2,'1');
+			});
+			
+			function traduce(entra, sale,valor){
+						entrada=entra.val();
+						sale.empty();
+						if (valor==1) $('#iaroha img').remove();
+						if (valor==2) $('#iavaroha img').remove();
+						for (var i=0;i <entrada.length;i++)
+							{
+								
+								var dato=entrada[i];
+								var dato_back=entrada[i-'1'];
+								switch(dato){
+									case 'S': 
+										sale.append('C ');
+										if (valor=='1') $('#iaroha').append('<img src=img/C.png>') ;
+										if (valor=='2') $('#iavaroha').append('<img src=img/C.png>')  ;
+										console.log('C');
+										break;
+									case 'r':
+										sale.append('Db ');
+										if (valor=='1') $('#iaroha').append('<img src=img/Db.png>');
+										if (valor=='2') $('#iavaroha').append('<img src=img/Db.png>');
+										console.log('Db');
+										break;
+									case 'R':
+										sale.append('D ');
+										if (valor=='1') $('#iaroha').append('<img src=img/D.png>');
+										if (valor=='2') $('#iavaroha').append('<img src=img/D.png>');
+										console.log('D');
+										break;
+									case 'g':
+										sale.append('Eb ');
+										if (valor=='1') $('#iaroha').append('<img src=img/Eb.png>');
+										if (valor=='2') $('#iavaroha').append('<img src=img/Eb.png>');
+										console.log('D#');
+										break;
+									case 'G':
+										sale.append('E ');
+										if (valor=='1') $('#iaroha').append('<img src=img/E.png>');
+										if (valor=='2') $('#iavaroha').append('<img src=img/E.png>');
+										console.log('E');
+										break;
+									case 'M':
+										sale.append('F ');
+										if (valor=='1') $('#iaroha').append('<img src=img/F.png>');
+										if (valor=='2') $('#iavaroha').append('<img src=img/F.png>');
+										console.log('F');
+										break;
+									case 'm':
+										sale.append('Gb ');
+										if (valor=='1') $('#iaroha').append('<img src=img/Gb.png>');
+										if (valor=='2') $('#iavaroha').append('<img src=img/Gb.png>');
+										console.log('Gb');
+										break;
+									case 'P':
+										sale.append('G ');
+										if (valor=='1') $('#iaroha').append('<img src=img/G.png>');
+										if (valor=='2') $('#iavaroha').append('<img src=img/G.png>');
+										console.log('G');
+										break;
+									case 'd':
+										sale.append('Ab ');
+										if (valor=='1') $('#iaroha').append('<img src=img/Ab.png>');
+										if (valor=='2') $('#iavaroha').append('<img src=img/Ab.png>');
+										console.log('G#');
+										break;
+									case 'D':
+										sale.append('A ');
+										if (valor=='1') $('#iaroha').append('<img src=img/A.png>');
+										if (valor=='2') $('#iavaroha').append('<img src=img/A.png>');
+										console.log('A');
+										break;
+									case 'n':
+										sale.append('Bb ');
+										if (valor=='1') $('#iaroha').append('<img src=img/Bb.png>');
+										if (valor=='2') $('#iavaroha').append('<img src=img/Bb.png>');
+										console.log('Bb');
+										break;
+									case 'N':
+										sale.append('B ');
+										if (valor=='1') $('#iaroha').append('<img src=img/B.png>');
+										if (valor=='2') $('#iavaroha').append('<img src=img/B.png>');
+										console.log('B');
+										break;			
+
+									case "'":
+										if (dato_back=="S"){
+											if (valor=='1') {
+												$('img:last-child', '#iaroha').remove();
+												$('#iaroha').append('<img src=img/C2.png>');('<img src=img/C2.png>');
+												}
+											if (valor=='2') {
+												$('img:last-child', '#iavaroha').remove();
+												$('#iavaroha').append('<img src=img/C2.png>');('<img src=img/C2.png>');
+											}
+										}
+										console.log("comillas");
+								 }
+								console.log(dato);
+															}
+						
+			
+			};
+		
+	
+	}); 
+</script>
+	</html>

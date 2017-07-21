@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<link rel="icon" type="imagen/png" href="favicon.png" />
+		<link rel="shorcut icon" type="image/png" href="favicon.png">
+		<meta charset="utf-8"/>
+		<title>Samay Ragas Occidental</title>
+		<script src="jquery-2.2.4.js"></script>
+		<link rel="stylesheet" href="mobile/jquery.mobile-1.4.5.css">
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="mobile/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/functions.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	</head>
+	<body>
+	 <div data-role="page" id="Inicio">
+		<div data-role="header">
+			<h1>Samay Raga Time</h1>
+		</div>
+		<div data-role="content">
+			<a href="./thaats.html" data-role="button" id="bthaats" >Thaats</a>
+			<a href="./ragas.html" data-role="button" id="ragas">Ragas</a>
+			<a href="./cragas.html" data-role="button" id="cragas" >Trasponer</a>
+			<a href="./rchakras.html" data-role="button" id="rchakras" >Ragas - Chakras</a>
+			</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#informacion" data-icon="alert" data-mini="true">Información</a></li>
+					<li><a href="" data-icon="info" data-mini="true" id="web">Web</a></li>
+				</ul>
+			</div>
+		</div>
+	 </div>
+	  
+	  <!-- Informacion -->
+	  <div data-role="page" id="informacion">
+		<div data-role="header"><a href="#Inicio" data-icon="back">Atras</a>
+			<h1>Samay Raga Time</h1>
+		</div>
+		<div data-role="content"> 
+		 <strong>Samay Raga Time </strong>es una sencilla aplicación con 96 ragas de la música del Sur de la Índia.<br>
+		 Los ragas estan divididos por zonas horarias para mejor uso pero tambien hemos proporcionado
+		 un apartado dónde podemos visualizar los ragas utilizados para activar los chakras y una
+		 sencilla aplicación dónde introduciendo las notas en el lenguaje hindu se trasportan a 
+		 un equivalente atemperado occidental.(lógicamente es imposible la exactitud pues la filosofía
+		 oriental divide la escala natural en 22 semitonos mientras que la occidental en 12).
+		 Espero que sea al menos de interes para algunas personas iniciadas en el tema y que permita
+		 disfrutar del conocimiento oriental.<br><br>
+		 Autor: <strong>Valentín Luque Mestanza</strong>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#informacion" data-icon="alert" data-mini="true">Información</a></li>
+					<li><a href="" data-icon="info" data-mini="true" id="web">Web</a></li>
+				</ul>
+			</div>
+		</div>
+	 
+	  </div>
+	  
+	 
+
+	  
+	  <!-- Thaats -->
+	 
+			
+		</div>
+	 </div>
+	</body>
+	<script languaje="javascript">
+	$(document).ready(function(){   
+			$("#bthaats").click(function () {     
+				document.location.href = "thaats.html";
+			});
+			$("#ragas").click(function () {     
+				document.location.href = "ragas.html";
+			});
+			$("#cragas").click(function () {     
+				document.location.href = "cragas.html";
+			});
+			$("#vibhas").click(function () {     
+			var w = window.open('info/vibhas.txt');
+			});
+			$("#g_malhar").click(function () {     
+			var w = window.open('info/g_malhar.txt');
+			});
+			$("#rchakras").click(function () {     
+				document.location.href = "rchakras.html";
+			});
+			$("#web").click(function () {     
+				document.location.href = "http://www.ananda.net";
+			});
+		});
+</script>
+
+</html>
+	
+		

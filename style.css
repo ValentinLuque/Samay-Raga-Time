@@ -1,0 +1,13 @@
+/* Valentin Luque Hoja de Estilos Samay Raga Occidental Time */
+@font-face{ 
+font-family:"Open Sans";
+src: url("fonts/OpenSans-Regular.ttf");
+
+}
+body{font-family:"Open Sans";}
+.rag{color:blue !important;} 
+.rags{color:red;} 
+ul li{ list-style-type: none;}
+.icon{width:32px;height32px;}
+.cuadrado{background-color:white; padding: 4px 4px;}
+.cuadrado2{background-color:black; color:#00FF00; padding: 4px 4px;}
