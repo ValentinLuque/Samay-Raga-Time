@@ -1,0 +1,20 @@
+?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "https://about.me/luquevalentin"
+    xmlns:gap   = "https://about.me/luquevalentin"
+    id          = "sarati.vlm.local"
+    versionCode = "01"
+    version     = "0.0.1" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>Samay Raga Time</name>
+
+  <description>
+      Algunos ragas del Sur de la India ordenados por hora del dia.
+  </description>
+
+  <author href="https://about.me/luquevalentin" email="valenti.luque@gmail.com">
+      Hardeep Shoker
+  </author>
+  <icon src="favicon.png" platform="ios" width="57" height="57" density="mdpi" />
+</widget>
